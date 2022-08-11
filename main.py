@@ -1,5 +1,5 @@
 from machine import Pin , PWM
-import machine
+import machine 
 import time
 morse = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....','I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.','Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-','Y': '-.--', 'Z': '--..', '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-','5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.'}
 slowhell = {'S': '00000100101010110101101010100100000', 'C': '00000111111000110001100011000100000','A': '00000111100010100101001011111000000','N': '00000111110001000100010001111100000', 'G': '00000111111000110101101011110000000', '7': '00000000011000101001001010001100000'}
@@ -46,7 +46,7 @@ time.sleep(qrss) #wait for one QRSS time unit before transmitting
 
 for i in range(len(callsign)):
     buffer = morse[callsign[i]]
-    start.value(0) #start transmitter
+    start.value(1) #start transmitter
     for x in range(len(buffer)):
         if "." in buffer[x]:
             pwm. duty_u16 (fskcw) #PWM 25% for 5Hz FSK
